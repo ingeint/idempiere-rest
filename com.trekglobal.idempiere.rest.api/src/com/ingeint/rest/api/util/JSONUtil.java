@@ -20,7 +20,7 @@ public class JSONUtil {
 		try {
 			JsonElement element = JsonParser.parseString(strJSON);
 			
-			if (!element.isJsonObject())
+			if (!element.isJsonObject() && !element.isJsonArray())
 				return JsonNull.INSTANCE;
 			
 			return element;
